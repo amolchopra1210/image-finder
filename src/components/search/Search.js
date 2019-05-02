@@ -28,12 +28,14 @@ class Search extends Component {
     }
 
     onAmountChange = (e,index,value) => {
-        const val = e.target.value;
-        if(val !== '') {
+        if(this.state.searchText !== '') {
             this.setState({amount: value},()=>{
                 axios.get(`${this.state.apiURL}/?key=${this.state.apiKey}&q=${this.state.searchText}&image_type=photo&per_page=${this.state.amount}&safesearch=true`).then(res => this.setState({images: res.data.hits})).catch(err => console.log(err))      
             })
-        } 
+        }
+        else {
+            this.setState({amount: value})
+        }
     }   
 
     render() {
