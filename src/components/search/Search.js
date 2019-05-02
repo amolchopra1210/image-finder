@@ -34,7 +34,6 @@ class Search extends Component {
     }   
 
     render() {
-        console.log(this.state.apiKey)
         return (
         <React.Fragment>
            <TextField name = "searchText" value = {this.state.searchText} onChange = {this.onTextChange}
