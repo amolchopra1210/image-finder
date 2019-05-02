@@ -47,7 +47,7 @@ class Search extends Component {
                 <MenuItem value = {50} primaryText = "50"/>
            </SelectField>
            <br/>
-           {this.state.images.length ? <ImageResults images = {this.state.images}/>: null}
+           {this.state.images.length ? <ImageResults images = {this.state.images}/>: "Your images will appear here"}
         </React.Fragment>
         )
     }
