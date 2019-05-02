@@ -34,6 +34,7 @@ class Search extends Component {
     }   
 
     render() {
+        let placeholderText = <div style = {{textAlign:"center"}}>Your images will appear here</div>
         return (
         <React.Fragment>
            <TextField name = "searchText" value = {this.state.searchText} onChange = {this.onTextChange}
@@ -47,7 +48,7 @@ class Search extends Component {
                 <MenuItem value = {50} primaryText = "50"/>
            </SelectField>
            <br/>
-           {this.state.images.length ? <ImageResults images = {this.state.images}/>: <div style = {{textAlign:"center"}}>Your images will appear here</div>}
+           {this.state.images.length ? <ImageResults images = {this.state.images}/>: placeholderText }
         </React.Fragment>
         )
     }
